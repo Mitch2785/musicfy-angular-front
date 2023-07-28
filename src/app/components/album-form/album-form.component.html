@@ -1,0 +1,34 @@
+<div class="col-md-4 offset-md-2">
+    <div class="card">
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <input type="text" name="nombre" [(ngModel)]="album.nombre" placeholder="Nombre" class="form-control" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="artista" [(ngModel)]="album.artista" placeholder="artista" class="form-control" >
+                </div>
+                <div class="form-group">
+                    <input type="number" name="year" [(ngModel)]="album.year" placeholder="2000" class="form-control" >
+                </div>
+                <div class="form-group">
+                    <input type="url" name="imagen" [(ngModel)]="album.imagen" placeholder="Link de la imagen" class="form-control" >
+                </div>
+                <button class="btn btn-success btn-block" (click)="editar ? updateAlbum() : saveNewAlbum()">
+                    GUARDAR
+                </button>
+                <p class="text-danger">{{mensajeError}}</p>
+            </form>
+        </div>
+        
+    </div>
+    
+</div>
+<div class="col-md-4">
+    <div class="card card-body text-center">
+        <img [src]="album.imagen == '' ? '/assets/no-image.jpg' : album.imagen" alt="" class="card-img-top">
+    </div>
+    <h3>{{album.nombre == '' ? 'Nombre del Album' : album.nombre}}</h3>
+    <p>{{album.artista == '' ? 'Nombre del Artista' : album.artista}}</p>
+    <p>{{album.year == 0 ? 'Año del Album' : album.year}}</p>
+</div>

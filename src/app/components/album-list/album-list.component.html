@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-md-4" *ngFor="let album of albums">
+        <div class="card-text-center">
+            <div class="card-header bg-dark d-flex justify-content-between align-items-center">
+                {{album.nombre}}
+                <button class="btn btn-danger" (click)="deleteAlbum(album.id)">
+                    <i class="far fa-trash-alt"></i>
+                </button>
+            </div>
+            <img [src]="album.imagen == '' ? '/assets/no-image.jpg' : album.imagen" class="card-img-top" alt="">
+            <div class="card-body">
+                <p>{{album.artista}}</p>
+                <p>{{album.year}}</p>
+                <a [routerLink]="['/albums/edit', album.id]" class="btn btn-info btn-block" >
+                    Modificar Album
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
