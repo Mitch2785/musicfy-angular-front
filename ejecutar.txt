@@ -1,0 +1,12 @@
+Pasos de ejecución del proyecto
+
+1.-Descargar del repositorio
+
+2.-Abrir una consola y ejecutar "npm install" para instalar las dependencias.
+
+3.-Ejecutar proyecto con el comando "ng serve -o". Se abrirá el navegador con la dirección "http://localhost:4200/"
+
+
+el Backend se ejecuta en la dirección:
+https://musicfy-nodejs-restapi-production.up.railway.app/api/albums
+
